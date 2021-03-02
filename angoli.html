@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset= "utf-8">
+        <meta name="viewpart" content="width=device-width, initial-scale=1">
+        <title>Esercizio sugli angoli</title>
+
+        <!--Metadati di angoli.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+        <style>
+            html, body { margin: 0; padding: 0; background-color: "red"}
+            canvas { display: block; }
+        </style>
+    </head>
+    <body>
+        <h1>Angoli</h1>
+	<script>
+	
+function setup() {
+    createCanvas(1000, 1000);
+    angleMode(DEGREES);
+}
+
+function draw() {
+	background(0, 0, 255);
+  
+//inizio a disegnare gli angoli in senso orario
+    fill(0, 255, 0)
+    text("Senso orario",70,60)
+  
+        fill(255, 255, 255);
+        circle(100,100,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100,100, 50, 50, 0, 30);
+        text("30°", 95, 150);
+  
+  
+        fill(255, 255, 255);
+        circle(100,200,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100, 200, 50, 50, 0, 45);
+        text("45°", 95, 250);
+  
+  
+        fill(255, 255, 255);
+        circle(100,300,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100, 300, 50, 50, 0, 60);
+        text("60°", 95, 350);
+  
+  
+        fill(255, 255, 255);
+        circle(100,400,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100, 400, 50, 50, 0, 90);
+        text("90°", 95, 450);
+  
+  
+        fill(255, 255, 255);
+        circle(100,500,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100, 500, 50, 50, 0, 180);
+        text("180°", 95, 550);
+  
+  
+        fill(255, 255, 255);
+        circle(100,600,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100, 600, 50, 50, 0, 270);
+        text("270°", 95, 650);
+  
+  
+        fill(255, 255, 255);
+        circle(100,700,50);
+  
+  
+        fill(0, 255, 0);
+        arc(100, 700, 50, 50, 0, 360);
+        text("360°", 95, 750);
+		
+		
+//inizio a disegnare gli angoli in senso antiorario
+    fill(0, 255, 255);
+    text("Senso antiorario", 350, 60);
+		
+  
+        fill(255, 255, 255);
+        circle(400,100,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,100, 50, 50, 330, 0);
+        text("30°", 400, 150);
+   
+  
+        fill(255, 255, 255);
+        circle(400,200,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,200, 50, 50, 315, 0);
+        text("45°", 400, 250);
+  
+  
+        fill(255, 255, 255);
+        circle(400,300,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,300, 50, 50, 300, 0);
+        text("60°", 400, 350);
+  
+  
+        fill(255, 255, 255);
+        circle(400,400,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,400, 50, 50, 270, 0);
+        text("90°", 400, 450);
+  
+    
+        fill(255, 255, 255);
+        circle(400,500,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,500, 50, 50, 180, 0);
+        text("180°", 400, 550);
+  
+  
+        fill(255, 255, 255);
+        circle(400,600,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,600, 50, 50, 90, 0);
+        text("270°", 400, 650);
+  
+  
+        fill(255, 255, 255);
+        circle(400,700,50);
+  
+  
+        fill(0, 255, 255);
+        arc(400,700, 50, 50, 360, 0);
+        text("360°", 400, 750);
+    
+}
+	</script>
+	</body>
+	</html>
