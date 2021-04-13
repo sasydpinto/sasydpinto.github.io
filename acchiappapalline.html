@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset= "utf-8">
+        <meta name="viewpart" content="width=device-width, initial-scale=1">
+        <title>Esercizio sugli acchiappapalline</title>
+
+        <!--Metadati di acchiappapalline.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+        <style>
+            html, body { margin: 0; padding: 0;}
+            canvas { display: block; }
+        </style>
+    </head>
+    <body>
+        <h1>acchiappapalline</h1>
+	<script>
+	// coordinata x di 20 palline
+let Pallinax = [];
+// coordinata y di 20 palline
+let Pallinay = [];
+// indice dell'array
+let i;
+// coordinata x della racchetta 
+let rectX;
+// Punteggio 
+let score = 0;
+
+
+function setup() {
+	//coordinata x delle palline causale 
+        for(i=0;i<20;i++) {
+        Pallinay[i]=Math.random() *-2000;
+        }
+    //coordinata y delle palline casuale
+        for(i=0;i<20;i++) {
+        Pallinax[i]=Math.random() *800;
+        }
+createCanvas(800, 600);
+}
+
+function draw() {
+background (255,255,30)
+
+	//Disegno le palline
+		for(i=0;i<20;i++) {
+			fill(0,45,255);
+			circle(Pallinax[i],Pallinay[i],50);
+		}
+
+    //Spostamento della coordinata y delle palline
+
+        for(i=0;i<20;i++) {
+			Pallinay[i]=Pallinay[i]+1;
+		}
+		
+	//movimento della racchetta
+		rectX = mouseX-50;
+		
+    //se coordinata x dell'angolo in alto a sinistra della racchetta (rectX) è <=0 allora rectX è uguale a 0 (NON SUPERA IL BORDO SINISTRO)
+        if (rectX <= 0) {
+			rectX = 0;
+        }
+		
+    //se coordinata y dell'angolo in alto a sinistra della racchetta (rectX) è >=720 allora rectX è uguale a 720 (NON SUPERA IL BORDO DESTRO)
+        if (rectX >= 720) {
+        rectX = 720;
+		}	
+		
+	//Se le palline toccano la racchetta (rectX) la pallina torna al suo punto iniziale
+		for(i=0;i<20;i++) {
+        if(Pallinay[i]>=525){
+        if(Pallinax[i]<rectX+100 && Pallinax[i]>rectX ){
+        Pallinay[i]=-100;
+		
+	//Aumento del punteggio 
+        score=score+1;
+            }
+				}
+					}
+
+        fill(255,0,255);
+		rect(rectX,550,80,20);
+		text("score"+score,300,25);
+  
+		}
+	</script>
+	</body>
+	</html>
